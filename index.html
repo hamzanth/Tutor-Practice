@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Cafe</title>
+	<title>PORTFOLIO</title>
 	<style type="text/css">
 		*{
 			box-sizing: border-box;
@@ -12,9 +12,6 @@
 			padding: 0;
 			height: 100%;
 		}
-		body{
-			background-color: #f1f1f1;
-		}
 		a{
 			text-decoration: none;
 			color: black;
@@ -24,347 +21,722 @@
 			margin: 0;
 			list-style-type: none;
 		}
-		nav{
-			background-color: black;
-			padding: 10px 20px;
+		section.hero-nav{
+			height: 65vh;
+			position: relative;
+			background-image: url("images/kids.jpg");
+			background-position: center;
 		}
-		nav ul.nav-list{
+		nav{
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
+			/*position: sticky;*/
+			/*background-color: white;*/
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 33;
+			width: 100%;
 		}
-		nav ul.nav-list li{
-			width: 25%;
-			/*border: 1px solid blue;*/
-			padding: 11px;
-			text-align: center;
+		nav ul.navlist{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 		}
-		nav ul.nav-list li:hover{
+		nav ul.navlist li{
+			padding: 1rem;
+		} 
+		nav ul.navlist li:hover{
 			background-color: lightgrey;
 		}
-		nav ul.nav-list li:hover a{
-			color: black;
-		}
-		nav ul.nav-list li a{
+		ul.navlist li a{
+			font-size: 1.8rem;
+			text-transform: uppercase;
 			color: white;
-			font-size: 1.6rem;
 		}
-		section.hero{
-			background-image: url("images/book.jpg");
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			height: 70vh;
-			position: relative;
+		ul.navlist li div.icont{
+			display: inline-block;
+			margin-bottom: 2px;
 		}
-		section.hero div.hero-text{
+		ul.navlist div.icont div.ic{
+			width: 1.2rem;
+			height: 0.1rem;
+			margin: 0.1rem;
+			background-color: white;
+		}
+		nav div.toggler{
+			cursor: pointer;
+			padding: 10px;
+			margin-top: -5px;
+			display: inline-block;
+		}
+		nav div.toggler:hover{
+			background-color: red;
+		}
+		nav div.tog{
+			width: 1.8rem;
+			height: 0.2rem;
+			margin: 0.2rem;
+			background-color: white;
+		}
+		nav div.toggler:hover nav div.toggler div.tog{
+			background-color: black;
+			/*width: 4rem;*/
+		}
+		section.hero-nav p{
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			text-align: center;
-		}
-		div.hero-text h1{
-			color: white;
-			font-size: 8rem;
-		}
-		div.hero-text h1:first-child{
-			margin-bottom: 0px;
-		}
-		div.hero-text h1:last-child{
-			margin-top: 15px;
-		}
-		section.hero p{
-			position: absolute;
-			color: white;
-			font-size: 1.6rem;
-		}
-		section.hero p.tim{
-			left: 30px;
-			bottom: 0px;
 			background-color: black;
-			padding: 4px 11px;
-		}
-		section.hero p.addr{
-			right: 30px;
-			bottom: 0px;
+			color: white;
+			font-size: 2.5rem;
+			padding: 12px 20px;
+			letter-spacing: 8px;
 		}
 		section.about{
-			width:55%;
-			margin: 50px auto;
+			width: 70%;
+			margin: 100px auto;
 		}
-		div.about-head{
+		section.about>h1{
 			text-align: center;
-		}
-		div.about-head h1{
-			/*border: 1px solid green;*/
-			color: white;
-			background-color: black;
-			padding: 5px 11px;
+			font-size: 2.5rem;
 			font-weight: normal;
-			font-size: 1.8rem;
-			letter-spacing: 2px;
-			display: inline-block;
-		}
-		div.about-head p{
-			text-align: justify;
-			font-size: 1.9rem;
-			line-height: 23px;
-		}
-		div.about-head p.bar{
-			border-left: 7px solid darkgrey;
-			padding: 14px 14px;
-		}
-		div.about-card img{
-			width: 100%;
-			max-height: 60vh;
-		}
-		div.card-content h1{
-			font-size: 2rem;
-		}
-		div.card-content h1 span.grey-text{
 			color: grey;
 		}
-		section.menu{
-			width:55%;
-			margin: 50px auto;
-		}
-		section.menu div.menu-header{
-			box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.4)
-		}
-		section.menu div.menu-head{
-			display: flex;
-			justify-content: space-between;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.2) 
-		}
-		div.menu-head div.col{
-			width: 50%;
+		div.fant h2, div.fant p{
 			text-align: center;
-			padding: 3px;
+			font-size: 1.6rem;
+			color: grey;
 		}
-		div.menu-head div.col:first-child{
-			background-color: grey;
+		div.fant p{
+			text-align: justify;
 		}
-		div.menu-head div.col a{
+		section.about div.col-cont{
+			display: flex;
+			padding: 0 12px;
+			/*align-items: center;*/
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		div.col-cont div.col{
+			width: 47%;
+		}
+		div.col img{
+			width: 100%;
+			height: 40vh;
+			opacity: 0.8;
+		}
+		div.col img:hover{
+			opacity: 1;
+		}
+		div.col h3{
+			text-align: center;
+			margin-bottom: 50px;
+			font-size: 1.8rem;
+			color: grey;
+		}
+		div.col p{
+			font-size: 1.7rem;
+			color: grey;
+			line-height: 24px;
+		}
+		section.about div.skills{
+			margin: 50px 0;
+		}
+		div.skills h2{
+			font-weight: normal;
+			font-size: 2rem;
+			text-align: center;
+			color: grey;
+			margin: 40px 0;
+		}
+		ul.skill-bars li h1{
+			color: grey;
+			letter-spacing: 10px;
+			font-size: 1.7rem;
+			font-weight: normal;
+			/*margin: 40px 0;*/
+		}
+		ul.skill-bars li div.bar{
+			background-color: lightgrey;
+		}
+		ul.skill-bars li div.photography{
+			padding: 8px;
+			background-color: black;
+			width: 90%;
+			font-size: 1.7rem;
+			text-align: center;
+			color: white;
+		}
+		ul.skill-bars li div.web{
+			padding: 8px;
+			background-color: black;
+			width: 85%;
+			font-size: 1.7rem;
+			text-align: center;
+			color: white;
+		}
+		ul.skill-bars li div.photoshop{
+			padding: 8px;
+			background-color: black;
+			width: 75%;
+			font-size: 1.7rem;
+			text-align: center;
+			color: white;
+		}
+		section.rating div.rating-cont{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		div.rating-cont div.rating-col{
+			width: 25%;
+			/*padding: 2rem;*/
+			background-color: black;
+		}
+		div.rating-col p, div.rating-col h1{
+			text-align: center;
+			color: white;
+		}
+		div.rating-col h1{
+			font-size: 2.1rem;
+		}
+		div.rating-col p{
 			font-size: 1.7rem;
 		}
-		div.menu-head div.col:first-child a{
+		div.rating-img{
+			height: 50vh;
+			position: relative;
+			background-image: url("images/fourth.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center top;
+		}
+		div.rating-img h1{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 3rem;
 			color: white;
+			letter-spacing: 8px;
+			/*font-weight: normal;*/
 		}
-		div.menu-body{
-			padding: 0 18px;
+		section.work{
+			width: 70%;
+			margin: 100px auto;
 		}
-		ul.menu-list li{
-			margin: 55px 0;
-		}
-		ul.menu-list li h1{
-			font-size: 2rem;
-			font-weight: normal;
-		}
-		ul.menu-list li p{
-			font-size: 2rem;
+		div.work-head h1, div.work-head p{
+			text-align: center;
 			color: grey;
 		}
-		section.menu div.menu-image{
-			margin: 20px 0;
+		div.work-head{
+			margin-bottom: 60px;
 		}
-		div.menu-image img{
+		div.work-head h1{
+			font-size: 2.5rem;
+			font-weight: normal;
+		}
+		div.work-head p{
+			font-size: 1.6rem;
+			line-height: 25px;
+		}
+		section.work div.image-container{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+		div.image-container img{
+			width: 23.5%;
+			height: 25vh;
+			margin-bottom: 15px;
+			cursor: pointer;
+		}
+		div.image-container img:hover{
+			opacity: 0.6;
+		}
+		section.work div.load-more{
+			text-align: center;
+			margin: 5rem;
+		}
+		div.load-more button{
+			border: none;
+			padding: 1.5rem;
+			font-size: 1.5rem;
+		}
+		div.modal{
+			position: fixed;
+			top: 0;
+			left: 0;
 			width: 100%;
-			max-height: 60vh;
+			height: 100%;
+			background-color: black;
+			z-index: 44;
+			padding-top: 10%;
+			display: none;
+		}
+		div.modal div.modal-content{
+			margin: 0 auto;
+			width: 38%;
+			height: 60vh;
+			animation: scaleup 0.5s;
+		}
+		div.modal img{
+			display: block;
+			width: 100%;
+			height: 80%;
+		}
+		div.modal div.modal-content p{
+			margin: 25px 0;
+			text-align: center;
+			font-size: 2.2rem;
+			color: lightgrey;
+		}
+		div.modal p.close{
+			position: absolute;
+			top: 0px;
+			right: 50px;
+			font-size: 4rem;
+			color: white;
+			cursor: pointer;
+		}
+		div.modal p.close:hover{
+			color: lightgrey;
+		}
+		@keyframes scaleup{
+			from{
+				transform: scale(0);
+			}
+			to{
+				transform: scale(1);
+			}
+		}
+		section.map{
+				height: 55vh;
+				position: relative;
+				background: url("images/kids.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				opacity: 0.8;
+				/*margin: 80px 20px 0 20px;*/
+		}
+		section.map h1{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			letter-spacing: 12px;
+			font-size: 2.9rem;
+			color: white;
 		}
 		section.contact{
-			width: 55%;
-			margin: 0 auto;
+			width: 70%;
+			margin: 100px auto;
 		}
-		section.contact div.find{
+		section.contact div.contact-head{
+			margin: 65px 0;
+		}
+		div.contact-head h1, div.contact-head p{
 			text-align: center;
-		}
-		div.find h1{
-			display: inline-block;
-			font-size: 2rem;
-			color: white;
-			background-color: black;
-			padding: 2px 5px;
+			color: grey;
+		}	
+		div.contact-head h1{
 			font-weight: normal;
-			letter-spacing: 5px;
+			font-size: 2.5rem;
 		}
-		div.contact-head h2{
-			font-size: 2rem;
-			font-weight: normal;
+		div.contact-head p{
+			font-size: 1.4rem;
 		}
-		div.contact-head img{
+		section.contact div.contact-body{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		div.contact-body div.cont-image{
+			width: 30%;
+		}
+		div.cont-image img{
 			width: 100%;
-			max-height: 60vh;
+			height: 25vh;
+			border-radius: 10px;
 		}
-		div.card-detail p{
+		div.contact-body div.cont-details{
+			width: 63%;
+		}
+		ul.cont-list li{
 			font-size: 1.9rem;
+			color: grey;
 		}
-		div.card-detail p span.dark{
-			color: white;
-			background-color: black;
+		div.cont-details p{
+			color: grey;
+			font-size: 1.5rem;
 		}
-		div.card-detail p span.res{
-			font-weight: bold;
-		}
-		div.card-detail form input{
-			width: 100%;
-			font-size: 1.8rem;
-			padding: 1.7rem 1.4rem;
+		form.contact-form input{
+			font-size: 1.5rem;
+			padding: 1.2rem;
 			border: 1px solid lightgrey;
-			margin-bottom: 15px;
 		}
-		div.card-detail form button{
+		form.contact-form div.half{
+			display: flex;
+			justify-content: space-between;
+			margin: 6px 0;
+		}
+		div.half input{
+			width: 49%;
+		}
+		div.full input{
+			width: 100%;
+		}
+		div.sendbtn button{
+			border: none;
+			padding: 1.4rem;
+			font-size: 1.5rem;
+			margin-top: 13px;
 			color: white;
 			background-color: black;
-			font-size: 1.8rem;
-			padding: 1rem 1.5rem;
-			border: none;
-			/*margin-bottom: 15px;*/
+		}
+		form.contact-form div.sendbtn{
+			text-align: right;
+			margin: 5px 0;
 		}
 		section.footer{
-			padding: 70px;
+			text-align: center;
+			background-color: grey;
+			padding: 5rem;
+		}
+		section.footer:hover{
+			background-color: black;
+		}
+		section.footer a{
+			border: none;
+			font-size: 1.5rem;
+			padding: 1rem 2rem;
+			cursor: pointer;
+			background-color: white;
 		}
 		section.footer p{
-			font-size: 1.5rem;
 			text-align: center;
+			font-size: 1.5rem;
+			color: white;
+			margin: 0;
 		}
-		@media screen and (max-width: 1100px){
-			section.menu, section.contact, section.about{
-				width: 67%;
+		section.footer div.ficon-container{
+			margin: 20px 0;
+		}
+		section.footer div.ficon{
+			display: inline-block;
+		}
+		div.ficon div.fic{
+			width: 1.5rem;
+			height: 0.3rem;
+			margin: 0.1rem;
+			background-color: white;
+		}
+		@media screen and (max-width: 1200px){
+			section.about{
+				width: 96%;
 			}
-		@media screen and (max-width: 1000px){
-			section.menu, section.contact, section.about{
-				width: 77%;
+			section.work, section.contact{
+				width: 94%;
 			}
-		@media screen and (max-width: 900px){
-			section.menu, section.contact, section.about{
-				width: 87%;
-			}
+		}
 		@media screen and (max-width: 800px){
-			section.menu, section.contact, section.about{
-				width: 97%;
+			div.image-container img{
+				width: 49%;
+				/*margin-bottom: initial;
+				height: 50vh;*/
+			}
+			div.cont-image img{
+				height: 18vh;
+			}
+			section.hero-nav p span.website{
+				display: none;
+			}
+			div.modal div.modal-content{
+				width: 80%;
+				height: 50vh;
+			}
+			div.modal{
+			padding-top: 24%;
+		}
+		}
+		@media screen and (max-width: 600px){
+			div.col-cont div.col{
+				width: 100%;
+			}
+			div.col-cont div.col-det{
+				display: none;
+			}
+			div.rating-cont div.rating-col{
+			width: 100%;
+			}
+			div.image-container img{
+			width: 100%;
+			margin-bottom: initial;
+			height: 50vh;
+			}
+			div.contact-body div.cont-image{
+				width: 100%;
+			}
+			div.contact-body div.cont-details{
+				width: 100%;
+				margin-top: 20px;
+			}
+			div.cont-image img{
+				height: 35vh;
+			}
+			nav ul.navlist{
+				/*display: none;*/
+				visibility: hidden;
 			}
 		}
 	</style>
 </head>
 <body>
-	<nav>
-		<ul class="nav-list">
+	<section class="hero-nav" id="hero">
+		<nav>
+		<ul class="navlist">
 			<li>
-				<a href="#">HOME</a>
+				<div class="icont">
+					<div class="ic"></div>
+					<div class="ic"></div>
+					<div class="ic"></div>
+				</div>
+				<a href="#about">Home</a>
 			</li>
 			<li>
-				<a href="#">ABOUT</a>
+				<div class="icont">
+					<div class="ic"></div>
+					<div class="ic"></div>
+					<div class="ic"></div>
+				</div>
+				<a href="#menu">About</a>
 			</li>
 			<li>
-				<a href="#">MENU</a>
+				<div class="icont">
+					<div class="ic"></div>
+					<div class="ic"></div>
+					<div class="ic"></div>
+				</div>
+				<a href="#menu">Portfolio</a>
 			</li>
 			<li>
-				<a href="#">WHERE</a>
+				<div class="icont">
+					<div class="ic"></div>
+					<div class="ic"></div>
+					<div class="ic"></div>
+				</div>
+				<a href="#contact">Contact</a>
 			</li>
 		</ul>
-	</nav>
-	<section class="hero">
-		<div class="hero-text">
-			<h1>the</h1>
-			<h1>Cafe</h1>
+		<div class="toggler">
+			<div class="tog"></div>
+			<div class="tog"></div>
+			<div class="tog"></div>
 		</div>
-			<p class="addr">15 Adr street, 5015</p>
-			<p class="tim">Open from 6am to 5pm</p>
+	</nav>
+	<p>MY <span class="website">WEBSITE</span> LOGO</p>
 	</section>
 	<section class="about">
-		<div class="about-head">
-			<h1>ABOUT THE CAFE</h1>
+		<h1 class="head-about">ABOUT ME</h1>
+		<div class="fant">
+			<h2>I love photography</h2>
 			<p>
-			The Cafe was founed in blaba by Mr.Smith in Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			<br>
-			<br>
-			In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.
-			</p>
-			<p class="bar">
-				<q>Use products from nature for what it's worth - but never too early, nor too late.</q> Fress is the new sweet.
-				<br>
-				<br>
-				<span class="owner">Chef, Coffeeist and Owner: Liam Brown</span>
+				We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
 		</div>
-		<div class="about-card">
-			<img src="images/fourth.jpg">
-			<div class="card-content">
-				<h1>opening hours: <span class="grey-text">everyday from 6am to 5pm.</span></h1>
-				<h1>Address: <span class="grey-text">15 Adr street, 5015, NY</span></h1>
+		<div class="col-cont">
+			<div class="col">
+				<h3>My Name</h3>
+				<img src="images/jenny.jpg">
 			</div>
+			<div class="col col-det">
+				<p>
+					Welcome to my website. I am Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat.
+				</p>
+			</div>
+		</div>
+		<div class="skills">
+			<h2>I'm really good at</h2>
+			<ul class="skill-bars">
+				<li>
+					<h1>Photography</h1>
+					<div class="bar">
+						<div class="photography">90%</div>
+					</div>
+				</li>
+				<li>
+					<h1>Web Design</h1>
+					<div class="bar">
+						<div class="web">85%</div>
+					</div>
+				</li>
+				<li>
+					<h1>Photoshop</h1>
+					<div class="bar">
+						<div class="photoshop">75%</div>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
-	<section class="menu">
-		<div class="menu-header">
-			<div class="menu-head">
-				<div class="col">
-					<a>Eat</a>
-				</div>
-				<div class="col">
-					<a>Drink</a>
-				</div>
+	<section class="rating">
+		<div class="rating-cont">
+			<div class="rating-col">
+				<h1>14+</h1>
+				<p>Partners</p>
 			</div>
-			<div class="menu-body">
-				<ul class="menu-list">
-					<li>
-						<h1>Bread Basket</h1>
-						<p>Assortment of fresh baked fruits breads and muffins 5.50</p>
-					</li>
-					<li>
-						<h1>Honey Almond Granola with Fruits</h1>
-						<p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
-					</li>
-					<li>
-						<h1>Belgian Waffle</h1>
-						<p>Vanilla flavored batter with malted flaour 7.50</p>
-					</li>
-					<li>
-						<h1>Scrambled eggs</h1>
-						<p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
-					</li>
-					<li>
-						<h1>Blueberry Pancakes</h1>
-						<p>With syrup, butter and lots of berries 8.50</p>
-					</li>
-				</ul>
+			<div class="rating-col">
+				<h1>55+</h1>
+				<p>Project Done</p>
+			</div>
+			<div class="rating-col">
+				<h1>89+</h1>
+				<p>Happy Clients</p>
+			</div>
+			<div class="rating-col">
+				<h1>150+</h1>
+				<p>Meetings</p>
 			</div>
 		</div>
-		<div class="menu-image">
-			<img src="images/third.jpg">
+		<div class="rating-img">
+			<h1>PORTFOLIO</h1>
 		</div>
+	</section>
+	<section class="work">
+		<div class="work-head">
+			<h1>MY WORK</h1>
+			<p>here are some of my latest lorem worm ipsum tipsum. <br> Click on the image to make them larger</p>
+		</div>
+		<div class="image-container">
+			<img src="images/book.jpg" alt="books">
+			<img src="images/boys.jpg"alt="boys">
+			<img src="images/sec.jpg" alt="money exchange">
+			<img src="images/third.jpg" alt="computers">
+			<img src="images/sour.jpg" alt="source code">
+			<img src="images/geometry.jpg" alt="geometry">
+			<img src="images/ferrari.jpg" alt="Ferrari">
+			<img src="images/rockstar.jpg" alt="Rockstar">
+		</div>
+		<div class="modal">
+			<div class="modal-content">
+				<img src="">
+				<p></p>
+			</div>
+			<p class="close" onclick="document.querySelector('div.modal').style.display='none'">x</p>
+		</div>
+		<div class="load-more">
+			<button>LOAD MORE</button>
+		</div>
+	</section>
+	<section class="map">
+		<h1>CONTACT</h1>
 	</section>
 	<section class="contact">
-		<div class="find">
-			<h1>WHERE TO FIND US</h1>
-		</div>
 		<div class="contact-head">
-			<h2>Find us at some address at some place.</h2>
-			<img src="images/third.jpg">
-			<div class="card-detail">
+			<h1>WHERE I WORK</h1>
+			<p>I'd love your feedback</p>
+		</div>
+		<div class="contact-body">
+			<div class="cont-image">
+				<img src="images/mark.jpg">
+			</div>
+			<div class="cont-details">
+				<ul class="cont-list">
+					<li>Chicago, US</li>
+					<li>Phone: +00 151515</li>
+					<li>Email: mail@mail.com</li>
+				</ul>
 				<p>
-					<span class="dark">FYI!</span> We offer full-services catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggest criteria of them all, both look and taste.
-					<br>
-					<br>
-					<span class="res">Reserve</span> a table, ask for today's special or just send us a message:
+					swing by for a cup of coffea, or leave me a note:
 				</p>
-				<form class="form-container">
-					<input type="text" name="name" placeholder="Name">
-					<input type="text" name="people" placeholder="How many people">
-					<input type="date" name="date" placeholder="11/16/2020 08:00 PM">
-					<input type="text" name="message" placeholder="Message\Special requirements">
-					<button class="send">SEND MESSAGE</button>
+				<form class="contact-form">
+					<div class="half">
+						<input type="text" name="name" placeholder="Name">
+						<input type="email" name="email" placeholder="Email">
+					</div>
+					<div class="full">
+						<input type="text" name="message" placeholder="Message">
+					</div>
+					<div class="sendbtn">
+						<button>SEND MESSAGE</button>
+					</div>
 				</form>
 			</div>
 		</div>
 	</section>
 	<section class="footer">
-		<p>Powered by <ins>Shaw</ins></p>
+		<a href="#hero" class="top">To the top</a>
+		<div class="ficon-container">
+			<div class="ficon">
+				<div class="fic"></div>
+				<div class="fic"></div>
+				<div class="fic"></div>
+			</div>
+			<div class="ficon">
+				<div class="fic"></div>
+				<div class="fic"></div>
+				<div class="fic"></div>
+			</div>
+			<div class="ficon">
+				<div class="fic"></div>
+				<div class="fic"></div>
+				<div class="fic"></div>
+			</div>
+			<div class="ficon">
+				<div class="fic"></div>
+				<div class="fic"></div>
+				<div class="fic"></div>
+			</div>
+			<div class="ficon">
+				<div class="fic"></div>
+				<div class="fic"></div>
+				<div class="fic"></div>
+			</div>
+			<div class="ficon">
+				<div class="fic"></div>
+				<div class="fic"></div>
+				<div class="fic"></div>
+			</div>
+		</div>
+		<p>powered by Shaw</p>
 	</section>
+
+	<script type="text/javascript">
+		let images = document.querySelectorAll("div.image-container img")
+		let modal = document.querySelector("div.modal")
+		let caption = document.querySelector("div.modal p")
+		let modalImage = document.querySelector("div.modal img")
+		for(let i=0; i<images.length; i++){
+			images[i].onclick = function(){
+				caption.textContent = this.alt
+				modalImage.src = this.src
+				modal.style.display = "block"
+			}
+		}
+	</script>
 </body>
 </html>
